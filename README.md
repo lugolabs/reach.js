@@ -43,12 +43,12 @@ You can also check the [original article](http://ejohn.org/blog/simple-javascrip
 
 #### `include`
 
-Now, let's rewrite our `Fruit` class, but this time we'll include a mixin object:
+Now, let's rewrite our `Fruit` class, but this time we'll include a *mixin* object:
 
 ```js
 var utils = {
 	augment: function(value) {
-		return value = 10;
+		return value + 10;
 	} 
 };
 var Fruit = Product.extend({
@@ -65,11 +65,15 @@ var fruit = new Fruit;
 
 Now our `Fruit` class has copied the `augment` method from the object `utils`; a great way to reuse code, without inheritence.
 
+#### events
+
+
+
 ### Specs
 
 The specs are written in [jasmine](http://pivotal.github.io/jasmine/) and are run on [karma](http://karma-runner.github.io/0.10/index.html) with the jasmine adapter.
 
-You can also check this [lugolabs](http://lugolabs.com/blog/2013/05/28/testing-javascript-with-karma) walkthrough, how to run the specs on karma.
+You can also check this [lugolabs](http://lugolabs.com/blog/2013/05/28/testing-javascript-with-karma) walkthrough on how to run the specs on karma.
 
 
 ---

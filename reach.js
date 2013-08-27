@@ -46,12 +46,12 @@
 	   
 	    // The dummy class constructor
 	    function reach() {
-	      // All construction is actually done in the init method
-	      if ( !initializing && this.init )
-	        this.init.apply(this, arguments);
 	     	if (this.include) {
 	     		this._mixin.apply(this, this.include instanceof Array ? this.include : [this.include])
 	     	}
+	      // All construction is actually done in the init method
+	      if ( !initializing && this.init )
+	        this.init.apply(this, arguments);
 	    }
 	   
 	    // Populate our constructed prototype object

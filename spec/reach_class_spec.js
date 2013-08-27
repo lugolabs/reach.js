@@ -82,5 +82,24 @@ describe("reach", function () {
 			var multiTyped = new MultiTyped;
 			expect(multiTyped.type).toBe('withType');
 		});
+
+		it("uses borrowed methods", function() {
+			var utils = {
+				augment: function(value) {
+					return value + 10;
+				} 
+			};
+			var Fruit = Product.extend({
+				include: utils,
+				type: 'fruit',
+
+				init: function() {
+					this._super();
+					this.price = this.augment(this.price);
+				}
+			});
+			var fruit = new Fruit;
+			expect(fruit.price).toBe(14);
+		});
 	});
 });
