@@ -71,7 +71,7 @@ Now our `Fruit` class has copied the `augment` method from the object `utils`; a
 
 ### Specs
 
-The specs are written in [jasmine](http://pivotal.github.io/jasmine/) and are run on [karma](http://karma-runner.github.io/0.10/index.html) with the jasmine adapter.
+The specs are written in [jasmine](https://jasmine.github.io/) and are run on [karma](http://karma-runner.github.io/0.10/index.html) with the jasmine adapter.
 
 You can also check this [lugolabs](http://lugolabs.com/blog/2013/05/28/testing-javascript-with-karma) walkthrough on how to run the specs on karma.
 
